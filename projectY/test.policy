@@ -1,0 +1,14 @@
+// 对lib目录下的projectX.jar包进行授权
+grant codeBase "file:./lib/projectX.jar"{
+    // 对当前目录下的所有文件具有读写权限
+    permission java.io.FilePermission  "./*", "read,write";
+};
+
+// 对./out/production/projectY目录下的所有代码进行授权
+grant codeBase "file:./out/production/projectY"{
+    permission java.io.FilePermission  "./*", "read,write";
+};
+
+grant {
+    permission java.util.PropertyPermission "user.dir", "read";
+};

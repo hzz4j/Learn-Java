@@ -1,0 +1,3 @@
+grant codebase "file:./out/" {
+	permission java.io.FilePermission "./test/foo.txt", "read";
+};

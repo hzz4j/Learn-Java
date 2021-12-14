@@ -1,0 +1,12 @@
+
+grant codebase "file:D:/Github/Learn-Java/security_manager/lib/read_file.jar" {
+	permission java.io.FilePermission "docs/books.txt", "read";
+};
+
+grant {
+    permission java.io.FilePermission "E:\IntelliJ IDEA 2021.2.2\bin\breakgen64.dll", "read";
+    permission java.util.PropertyPermission "user.dir", "read";
+    permission java.io.FilePermission "./lib/read_file.jar", "read";
+    permission java.lang.RuntimePermission "createClassLoader";
+    permission java.io.FilePermission "./docs/books.txt", "read";
+};
